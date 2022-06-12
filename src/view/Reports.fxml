@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="679.0" prefWidth="833.0" styleClass="background-pane" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <Label fx:id="appointmentLabel" layoutX="369.0" layoutY="48.0" styleClass="title" text="Reports">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TableView fx:id="reportTable" layoutX="56.0" layoutY="215.0">
+        <columns>
+            <TableColumn fx:id="appointmentIdColumn" prefWidth="101.60005187988281" text="Id" />
+            <TableColumn fx:id="customerColumn" prefWidth="130.0" text="Customer" />
+          <TableColumn fx:id="typeColumn" editable="false" prefWidth="195.0" text="Type" />
+            <TableColumn fx:id="startColumn" minWidth="0.0" prefWidth="145.0" text="Start" />
+            <TableColumn fx:id="endColumn" prefWidth="145.0" text="End" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="reportCombo" layoutX="63.0" layoutY="170.0" maxWidth="-Infinity" onAction="#setReport" promptText="Report Type" styleClass="combo-box-report" />
+      <Button fx:id="backButton" layoutX="725.0" layoutY="38.0" mnemonicParsing="false" onAction="#handleBack" styleClass="back-button" text="Back" />
+      <Label fx:id="reportTitle" layoutX="321.0" layoutY="165.0" prefHeight="40.0" prefWidth="426.0" styleClass="title">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label> 
+      </children>
+</AnchorPane>
